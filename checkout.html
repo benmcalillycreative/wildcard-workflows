@@ -5,76 +5,71 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Checkout — Wildcard Workflows</title>
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#9E1B2F">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;800;900&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,800;1,9..144,700&family=Barlow+Condensed:wght@600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-body{margin:0;background:#F4EEE3}
-a{color:#1B1915}a:hover{color:#C2381A}
-a:focus-visible,input:focus-visible{outline:3px solid #C2381A;outline-offset:3px}
-.label{font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;font-weight:500;text-transform:uppercase;letter-spacing:.08em}
-.pay{text-decoration:none;background:#C2381A;color:#FFF7EE;font-weight:800;font-size:19px;padding:16px 24px;border:2px solid #1B1915;border-radius:6px;box-shadow:4px 4px 0 #1B1915;min-height:56px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;gap:12px}
-.pay:hover{color:#FFF7EE}
-.pay:active{box-shadow:none;transform:translate(4px,4px)}
-.pay[aria-disabled="true"]{background:#5C5347;box-shadow:none;cursor:not-allowed}
-.row{display:flex;justify-content:space-between;gap:16px}
+body{margin:0;background:#F4EBD6}
+a{color:#1C2142}a:hover{color:#9E1B2F}
+a:focus-visible,input:focus-visible{outline:3px solid #D6A23A;outline-offset:3px}
+.caps{font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.pay{text-decoration:none;background:#9E1B2F;color:#FBF6EA;font-size:21px;padding:18px 24px;border-radius:3px;min-height:56px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;text-align:center}
+.pay:hover{color:#FBF6EA;background:#861627}
+.pay[aria-disabled="true"]{background:#4F526B;cursor:not-allowed}
+.row{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #C9B994}
 .row dd{margin:0;text-align:right}
 </style>
 </head>
 <body>
-<div style="background:#F4EEE3;color:#1B1915;font-family:'Archivo',system-ui,sans-serif;font-size:17px;line-height:26px;min-height:100vh;">
-  <header style="border-bottom:2px solid #1B1915;">
-    <div style="max-width:1100px;margin:0 auto;padding:16px clamp(16px,4vw,32px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;">
-      <a href="index.html" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:#1B1915;">
-        <span aria-hidden="true" style="width:40px;height:40px;border-radius:999px;background:#C2381A;color:#FFF7EE;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;">WW</span>
-        <span style="font-weight:900;font-size:20px;letter-spacing:-.02em;">Wildcard Workflows</span>
+<div style="background:#F4EBD6;color:#1C2142;font-family:'Work Sans',system-ui,sans-serif;font-size:17px;line-height:27px;min-height:100vh;">
+  <header style="border-bottom:1px solid #1C2142;">
+    <div style="max-width:1100px;margin:0 auto;padding:18px clamp(16px,4vw,40px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;">
+      <a href="index.html" style="text-decoration:none;display:flex;flex-direction:column;align-items:center;color:#1C2142;">
+        <span style="font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:26px;line-height:26px;letter-spacing:-.01em;">Wildcard</span>
+        <span class="caps" style="font-size:11px;line-height:14px;letter-spacing:.32em;border-top:1px solid #1C2142;border-bottom:1px solid #1C2142;padding:1px 0 1px .32em;margin-top:3px;">Workflows</span>
       </a>
-      <span class="label" style="color:#5C5347;">Step 2 of 3 · Break the seal</span>
+      <span class="caps" style="font-size:15px;line-height:18px;color:#4F526B;">Step 2 of 3 · Pay once</span>
     </div>
   </header>
 
-  <main style="max-width:1100px;margin:0 auto;padding:48px clamp(16px,4vw,32px) 64px;display:flex;flex-direction:column;gap:32px;">
-    <a href="index.html#boxes" style="font-weight:700;font-size:15px;">← Back to boxes</a>
-    <div style="display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start;">
+  <main style="max-width:1100px;margin:0 auto;padding:48px clamp(16px,4vw,40px) 96px;display:flex;flex-direction:column;gap:36px;">
+    <a href="index.html#boxes" style="font-weight:500;font-size:15px;">← Back to the boxes</a>
+    <div style="display:flex;flex-wrap:wrap;gap:56px;align-items:flex-start;">
 
-      <section aria-labelledby="summary-h" style="flex:1 1 380px;min-width:0;background:#D8BF97;border:2px solid #1B1915;border-radius:2px;box-shadow:4px 4px 0 #1B1915;padding:clamp(20px,4vw,32px);display:flex;flex-direction:column;gap:20px;">
-        <div class="label" style="display:flex;justify-content:space-between;align-items:center;">
-          <span id="box-num">Your box · Box 01</span>
-          <span style="background:#C2381A;color:#FFF7EE;border-radius:999px;padding:4px 10px;">Sealed</span>
+      <section aria-labelledby="summary-h" style="flex:1 1 380px;min-width:0;display:flex;flex-direction:column;">
+        <div id="front" style="background:repeating-linear-gradient(90deg,#9E1B2F 0 14px,#B42A3E 14px 22px);padding:12px;color:#FBF6EA;">
+          <div id="frame1" style="border:2px solid #FBF6EA;padding:6px;"><div id="frame2" style="border:1px solid #FBF6EA;padding:32px 24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;">
+            <span id="box-num" class="caps" style="font-size:14px;line-height:18px;letter-spacing:.24em;">Your box · Box No. 01</span>
+            <h1 id="summary-h" style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:clamp(38px,6vw,48px);line-height:1.04;letter-spacing:-.01em;">Family Fun</h1>
+            <span id="mini-rule" style="width:48px;border-top:1px solid #FBF6EA;"></span>
+            <p id="box-desc" style="margin:0;">Dinner, chores and the week ahead, handled by tiny routines instead of you.</p>
+          </div></div>
         </div>
-        <div aria-hidden="true" style="height:16px;border:2px solid #1B1915;background:repeating-linear-gradient(-45deg,#1B1915 0 8px,#F0C23A 8px 18px);"></div>
-        <h1 id="summary-h" style="margin:0;font-size:40px;line-height:44px;font-weight:900;letter-spacing:-.02em;">Realtor Box</h1>
-        <p id="box-desc" style="margin:0;">Leads, listings and follow-up for agents and brokers.</p>
-        <dl style="margin:0;display:flex;flex-direction:column;gap:12px;border-top:2px solid #1B1915;padding-top:16px;">
-          <div class="row"><dt class="label">Contents</dt><dd id="box-contents">3 n8n workflows + setup guide</dd></div>
-          <div class="row"><dt class="label">Works with</dt><dd id="box-apps">Gmail · Google Sheets · Google Calendar</dd></div>
-          <div class="row"><dt class="label">Delivery</dt><dd>Instant download + emailed link</dd></div>
+        <dl style="margin:0;border:1px solid #1C2142;border-top:0;background:#FBF6EA;padding:8px clamp(16px,3vw,24px) 4px;display:flex;flex-direction:column;">
+          <div class="row"><dt class="caps" style="font-size:14px;">Net contents</dt><dd id="box-contents">3 n8n automations + setup guide</dd></div>
+          <div class="row"><dt class="caps" style="font-size:14px;">Works with</dt><dd id="box-apps">Gmail · Google Sheets · Google Calendar</dd></div>
+          <div class="row"><dt class="caps" style="font-size:14px;">Delivery</dt><dd>Instant download + emailed link</dd></div>
+          <div class="row" style="border-bottom:0;align-items:baseline;padding:16px 0 12px;"><dt class="caps" style="font-size:18px;">Total</dt><dd id="box-price" style="font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:40px;line-height:44px;">$19</dd></div>
         </dl>
-        <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid #1B1915;padding-top:16px;">
-          <span style="font-weight:800;font-size:20px;">Total</span>
-          <span id="box-price" style="font-weight:900;font-size:40px;line-height:44px;">$19</span>
-        </div>
-        <p style="margin:0;font-size:14px;line-height:20px;">One payment. No subscription.</p>
       </section>
 
       <section aria-labelledby="pay-h" style="flex:1 1 380px;min-width:0;display:flex;flex-direction:column;gap:24px;">
-        <div style="display:flex;flex-direction:column;gap:8px;">
-          <h2 id="pay-h" style="margin:0;font-size:32px;line-height:36px;font-weight:900;letter-spacing:-.02em;">Break the seal</h2>
-          <p style="margin:0;color:#5C5347;">You'll enter your email on the secure checkout page. That's where we send your download link, so you can come back to your box anytime.</p>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <span class="caps" style="font-size:15px;line-height:18px;color:#9E1B2F;">One payment · No subscription</span>
+          <h2 id="pay-h" style="margin:0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:40px;line-height:44px;">Ready to open it?</h2>
+          <p style="margin:0;color:#4F526B;">You'll enter your email on the secure checkout page. That's where your download link goes, so you can come back to your box anytime.</p>
         </div>
-        <div style="display:flex;gap:12px;align-items:flex-start;border:2px solid #1B1915;border-radius:2px;background:#FFF7EE;padding:16px;">
-          <input id="ack" type="checkbox" style="width:22px;height:22px;margin:2px 0 0;accent-color:#C2381A;flex-shrink:0;">
-          <label for="ack" style="font-size:15px;line-height:22px;">I understand the workflows are a surprise. Every box includes three working workflows and only uses the apps listed.</label>
+        <div style="display:flex;gap:14px;align-items:flex-start;border:1px solid #1C2142;background:#FBF6EA;padding:18px;">
+          <input id="ack" type="checkbox" style="width:22px;height:22px;margin:2px 0 0;accent-color:#9E1B2F;flex-shrink:0;">
+          <label for="ack" style="font-size:15px;line-height:23px;">I understand the automations inside are a surprise. Every box holds three working ones and only uses the apps listed.</label>
         </div>
-        <a id="pay" class="pay" href="#" aria-disabled="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFF7EE" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="1"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>
-          <span id="pay-text">Pay $19 and unbox</span>
-        </a>
-        <p id="pay-note" style="margin:0;font-size:14px;line-height:20px;color:#5C5347;text-align:center;">Tick the box above to continue. You'll finish payment on Stripe's secure checkout page.</p>
-        <div style="border-top:2px solid #1B1915;padding-top:16px;display:flex;flex-direction:column;gap:8px;">
-          <span class="label">The value floor</span>
-          <p style="margin:0;font-size:15px;line-height:22px;color:#5C5347;">If a workflow won't import or run as described, we replace it or refund the box.</p>
+        <a id="pay" class="pay caps" href="#" aria-disabled="true"><span id="pay-text">Pay $19 and open the box</span></a>
+        <p id="pay-note" role="status" style="margin:0;font-size:14px;line-height:21px;color:#4F526B;text-align:center;">Tick the box above to continue.</p>
+        <div style="border-top:1px solid #1C2142;padding-top:16px;display:flex;flex-direction:column;gap:6px;">
+          <span class="caps" style="font-size:14px;line-height:18px;">The honest part</span>
+          <p style="margin:0;font-size:15px;line-height:23px;color:#4F526B;">If something won't import or run as described, we'll fix it or refund the box.</p>
         </div>
       </section>
     </div>
@@ -83,23 +78,32 @@ a:focus-visible,input:focus-visible{outline:3px solid #C2381A;outline-offset:3px
 <script>
 // ---- Paste each box's Stripe Payment Link between the quotes. Empty = "opening soon". ----
 const BOXES = {
-  realtor:  { num: "Box 01", name: "Realtor Box",    price: "$19", stripe: "", desc: "Leads, listings and follow-up for agents and brokers.", apps: "Gmail · Google Sheets · Google Calendar", contents: "3 n8n workflows + setup guide" },
-  creator:  { num: "Box 02", name: "Creator Box",    price: "$19", stripe: "", desc: "Posting, repurposing and inbox triage for creators.", apps: "Gmail · Google Drive · Notion", contents: "3 n8n workflows + setup guide" },
-  shop:     { num: "Box 03", name: "Small Shop Box", price: "$19", stripe: "", desc: "Orders, reviews and customer emails for local shops.", apps: "Gmail · Google Sheets · Stripe", contents: "3 n8n workflows + setup guide" },
-  ministry: { num: "Box 04", name: "Ministry Box",   price: "$19", stripe: "", desc: "Volunteers, events and newsletters for churches.", apps: "Gmail · Google Sheets · Google Calendar", contents: "3 n8n workflows + setup guide" },
-  deck:     { num: "The full deck", name: "The Full Deck", price: "$59", stripe: "", desc: "All four boxes. Twelve workflows.", apps: "Everything listed on the four boxes", contents: "12 n8n workflows + 4 setup guides" },
+  family:   { num: "Box No. 01", name: "Family Fun",    price: "$19", stripe: "", desc: "Dinner, chores and the week ahead, handled by tiny routines instead of you.", apps: "Gmail · Google Sheets · Google Calendar", contents: "3 n8n automations + setup guide", theme: "carmine" },
+  friends:  { num: "Box No. 02", name: "Friend Group",  price: "$19", stripe: "", desc: "For the friends you swear you'll see more often. Now you will.", apps: "Gmail · Google Sheets · Google Drive", contents: "3 n8n automations + setup guide", theme: "blue" },
+  delight:  { num: "Box No. 03", name: "Daily Delight", price: "$19", stripe: "", desc: "Small good things on a schedule: mornings, sunsets and the night sky.", apps: "Gmail · free public weather and fun-fact feeds", contents: "3 n8n automations + setup guide", theme: "mustard" },
+  mischief: { num: "Box No. 04", name: "Mischief",      price: "$19", stripe: "", desc: "Harmless chaos for your group chat or office channel.", apps: "Discord or Slack · Gmail · Google Sheets", contents: "3 n8n automations + setup guide", theme: "ink" },
+  shelf:    { num: "The whole shelf", name: "All Four Boxes", price: "$59", stripe: "", desc: "Every carton in Drop No. 01. Twelve tricks.", apps: "Everything listed on the four boxes", contents: "12 n8n automations + 4 setup guides", theme: "carmine" },
+};
+const THEMES = {
+  carmine: { bg: "repeating-linear-gradient(90deg,#9E1B2F 0 14px,#B42A3E 14px 22px)", fg: "#FBF6EA", rule: "#FBF6EA" },
+  blue:    { bg: "#8FB0C9", fg: "#1C2142", rule: "#1C2142" },
+  mustard: { bg: "#D6A23A", fg: "#1C2142", rule: "#1C2142" },
+  ink:     { bg: "#1C2142", fg: "#FBF6EA", rule: "#D6A23A" },
 };
 const key = new URLSearchParams(location.search).get("box");
-const box = BOXES[key] || BOXES.realtor;
+const box = BOXES[key] || BOXES.family;
+const t = THEMES[box.theme];
 const $ = id => document.getElementById(id);
 document.title = "Checkout — " + box.name + " — Wildcard Workflows";
+$("front").style.background = t.bg; $("front").style.color = t.fg;
+$("frame1").style.borderColor = t.rule; $("frame2").style.borderColor = t.rule; $("mini-rule").style.borderTopColor = t.rule;
 $("box-num").textContent = "Your box · " + box.num;
 $("summary-h").textContent = box.name;
 $("box-desc").textContent = box.desc;
 $("box-apps").textContent = box.apps;
 $("box-contents").textContent = box.contents;
 $("box-price").textContent = box.price;
-$("pay-text").textContent = box.stripe ? "Pay " + box.price + " and unbox" : "Checkout opening soon";
+$("pay-text").textContent = box.stripe ? "Pay " + box.price + " and open the box" : "Opening soon";
 
 const pay = $("pay"), ack = $("ack");
 function refresh() {
@@ -107,9 +111,9 @@ function refresh() {
   pay.setAttribute("aria-disabled", String(!ready));
   pay.href = ready ? box.stripe : "#";
   $("pay-note").textContent = !box.stripe
-    ? "This box isn't on sale yet. Check back soon."
-    : ack.checked ? "You'll finish payment on Stripe's secure checkout page. Card, Apple Pay and Google Pay accepted."
-                  : "Tick the box above to continue. You'll finish payment on Stripe's secure checkout page.";
+    ? "This box isn't on sale just yet. Check back soon."
+    : ack.checked ? "Secure checkout by Stripe. Card, Apple Pay and Google Pay."
+                  : "Tick the box above to continue.";
 }
 pay.addEventListener("click", e => { if (pay.getAttribute("aria-disabled") === "true") e.preventDefault(); });
 ack.addEventListener("change", refresh);
