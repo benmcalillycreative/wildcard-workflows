@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your box is on its way — Wildcard Workflows</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#9E1B2F">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,800;1,9..144,700&family=Barlow+Condensed:wght@600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4EBD6;color:#1C2142;font-family:'Work Sans',system-ui,sans-serif;font-size:17px;line-height:27px}
+a{color:#1C2142}a:hover{color:#9E1B2F}
+a:focus-visible{outline:3px solid #D6A23A;outline-offset:3px}
+.caps{font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.wrap{max-width:1100px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+.carton{background:repeating-linear-gradient(90deg,#9E1B2F 0 14px,#B42A3E 14px 22px);padding:12px;color:#FBF6EA}
+.f1{border:2px solid #FBF6EA;padding:6px}.f2{border:1px solid #FBF6EA;padding:clamp(28px,5vw,48px) clamp(20px,4vw,40px);text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px}
+h1{margin:0;font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:clamp(40px,7vw,68px);line-height:1;letter-spacing:-.02em}
+h1 em{font-style:italic;font-weight:700}
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.steps li{display:flex;gap:18px;border-top:1px solid #1C2142;padding:16px 0}
+.steps li:last-child{border-bottom:1px solid #1C2142}
+.n{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:700;font-size:22px;color:#9E1B2F;min-width:34px}
+</style>
+</head>
+<body>
+<header style="border-bottom:1px solid #1C2142">
+  <div class="wrap" style="padding-top:18px;padding-bottom:18px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
+    <a href="index.html" style="text-decoration:none;display:flex;flex-direction:column;align-items:center">
+      <span style="font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:26px;line-height:26px;letter-spacing:-.01em">Wildcard</span>
+      <span class="caps" style="font-size:11px;line-height:14px;letter-spacing:.32em;border-top:1px solid #1C2142;border-bottom:1px solid #1C2142;padding:1px 0 1px .32em;margin-top:3px">Workflows</span>
+    </a>
+    <span class="caps" style="font-size:15px;color:#4F526B">Step 3 of 3 · Paid</span>
+  </div>
+</header>
+<main class="wrap" style="padding-top:48px;padding-bottom:96px;display:flex;flex-direction:column;gap:48px">
+  <section class="carton" aria-labelledby="h"><div class="f1"><div class="f2">
+    <span class="caps" style="font-size:15px;letter-spacing:.24em">Thank you · Order received</span>
+    <h1 id="h">Your <em id="box-name">box</em> is on its way.</h1>
+    <span style="width:56px;border-top:1px solid #FBF6EA"></span>
+    <p style="margin:0;max-width:520px;font-size:19px;line-height:29px">Check your inbox in the next few minutes. Your files arrive as an email attachment, sent to the address you used at checkout.</p>
+  </div></div></section>
+
+  <section style="display:flex;flex-wrap:wrap;gap:48px" aria-labelledby="next">
+    <div style="flex:1 1 280px">
+      <span class="caps" style="font-size:15px;color:#9E1B2F">What happens next</span>
+      <h2 id="next" style="margin:10px 0 0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:40px;line-height:44px">Opening the carton</h2>
+    </div>
+    <ol class="steps" style="flex:2 1 460px">
+      <li><span class="n">i.</span><span>Look for an email from <b>Wildcard Workflows</b> with a .zip attached. Not there in ten minutes? Check spam or promotions.</span></li>
+      <li><span class="n">ii.</span><span>Unzip it and open <b>Setup Guide.pdf</b> first. It walks you through everything.</span></li>
+      <li><span class="n">iii.</span><span>Import each workflow into n8n, connect your accounts, and switch it on.</span></li>
+    </ol>
+  </section>
+
+  <p style="margin:0;font-size:15px;line-height:23px;color:#4F526B">No email after half an hour, or something won't run as described? Reply to your Stripe receipt and we'll sort it out, or refund the box. <a href="index.html#boxes" style="font-weight:600">See the other boxes</a></p>
+</main>
+<script>
+const NAMES = { family: "Family Fun", friends: "Friend Group", delight: "Daily Delight", mischief: "Mischief", shelf: "four boxes" };
+const key = new URLSearchParams(location.search).get("box");
+if (NAMES[key]) document.getElementById("box-name").textContent = key === "shelf" ? "four boxes are" : NAMES[key] + " box";
+if (key === "shelf") document.getElementById("h").lastChild.textContent = " on their way.";
+</script>
+</body>
+</html>
