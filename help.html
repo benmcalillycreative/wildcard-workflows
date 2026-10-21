@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Help — Wildcard Workflows</title>
+<meta name="description" content="Fixes for the usual snags when setting up a Wildcard Workflows box in n8n.">
+<meta name="theme-color" content="#9E1B2F">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:title" content="Help — Wildcard Workflows">
+<meta property="og:description" content="Fixes for the usual snags when setting up a box in n8n.">
+<meta property="og:image" content="https://wildcard.benmcalilly.com/share-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,800;1,9..144,700&family=Barlow+Condensed:wght@600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4EBD6;color:#1C2142;font-family:'Work Sans',system-ui,sans-serif;font-size:17px;line-height:27px}
+a{color:#1C2142}a:hover{color:#9E1B2F}
+a:focus-visible,summary:focus-visible{outline:3px solid #D6A23A;outline-offset:3px}
+.caps{font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.wrap{max-width:1100px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+.carton{background:repeating-linear-gradient(90deg,#9E1B2F 0 14px,#B42A3E 14px 22px);padding:12px;color:#FBF6EA}
+.f1{border:2px solid #FBF6EA;padding:6px}.f2{border:1px solid #FBF6EA;padding:clamp(28px,5vw,48px) clamp(20px,4vw,40px);text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px}
+h1{margin:0;font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:clamp(40px,7vw,68px);line-height:1;letter-spacing:-.02em}
+h1 em{font-style:italic;font-weight:700}
+h2{margin:8px 0 0;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:clamp(30px,4vw,40px);line-height:1.1}
+.toc{display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:center}
+.toc a{color:#FBF6EA;font-size:15px}
+.group{display:flex;flex-wrap:wrap;gap:24px 48px;scroll-margin-top:24px}
+.group > header{flex:1 1 260px}
+.qs{flex:2 1 480px;min-width:0}
+details{border-top:1px solid #1C2142}
+.qs details:last-child{border-bottom:1px solid #1C2142}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding:16px 0;font-weight:600}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:24px;color:#9E1B2F;flex-shrink:0}
+details[open] summary::after{content:"–"}
+.a{padding:0 0 18px;color:#2E3354}
+.a p{margin:0 0 10px}.a p:last-child{margin:0}
+.a ol{margin:0 0 10px;padding-left:22px}
+.path{font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-weight:600;letter-spacing:.04em;background:#FBF6EA;border:1px solid #C9B994;padding:0 6px;border-radius:2px;white-space:nowrap}
+code{font-family:ui-monospace,Menlo,monospace;font-size:15px;background:#FBF6EA;border:1px solid #C9B994;padding:0 4px;border-radius:2px}
+.contact{background:#1C2142;color:#FBF6EA}
+.contact a{color:#D6A23A}
+</style>
+</head>
+<body>
+<header style="border-bottom:1px solid #1C2142">
+  <div class="wrap" style="padding-top:18px;padding-bottom:18px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
+    <a href="index.html" style="text-decoration:none;display:flex;flex-direction:column;align-items:center">
+      <span style="font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:26px;line-height:26px;letter-spacing:-.01em">Wildcard</span>
+      <span class="caps" style="font-size:11px;line-height:14px;letter-spacing:.32em;border-top:1px solid #1C2142;border-bottom:1px solid #1C2142;padding:1px 0 1px .32em;margin-top:3px">Workflows</span>
+    </a>
+    <a href="index.html#boxes" class="caps" style="font-size:15px;text-decoration:none">The boxes</a>
+  </div>
+</header>
+
+<main class="wrap" style="padding-top:48px;padding-bottom:96px;display:flex;flex-direction:column;gap:72px">
+  <section class="carton" aria-labelledby="h"><div class="f1"><div class="f2">
+    <span class="caps" style="font-size:15px;letter-spacing:.24em">Help desk</span>
+    <h1 id="h">If something's <em>off</em>.</h1>
+    <span style="width:56px;border-top:1px solid #FBF6EA"></span>
+    <p style="margin:0;max-width:560px;font-size:19px;line-height:29px">The usual snags, and how to clear them. Most take under a minute.</p>
+    <nav class="toc caps" aria-label="Help topics">
+      <a href="#start">Getting started</a><a href="#accounts">Connecting accounts</a><a href="#sheets">Sheets</a>
+      <a href="#timing">Timing</a><a href="#chat">Discord &amp; Slack</a><a href="#order">Your order</a>
+    </nav>
+  </div></div></section>
+
+  <section class="group" id="start" aria-labelledby="start-h">
+    <header><span class="caps" style="font-size:15px;color:#9E1B2F">No. 1</span><h2 id="start-h">Getting started</h2></header>
+    <div class="qs">
+      <details open><summary>What do I need before I start?</summary><div class="a">
+        <p>An n8n account (n8n Cloud, or n8n running on your own computer or server), a Google account for the Gmail and Sheets steps, and the box's <b>Setup Guide.pdf</b>. That's it. Every box lists its apps on the carton.</p>
+        <p>If you've used n8n before, a box takes about fifteen minutes. New to it? Plan on an hour for the first one. The ones after that go faster, since your accounts are already connected.</p>
+      </div></details>
+      <details><summary>How do I import a workflow?</summary><div class="a">
+        <ol><li>Unzip the box.</li><li>In n8n, create a new, empty workflow.</li><li>Open the <span class="path">⋯</span> menu at the top right and choose <span class="path">Import from File</span>, then pick one of the <code>.json</code> files.</li></ol>
+        <p>Do one workflow at a time. Each has a <b>Start here</b> note on the canvas.</p>
+      </div></details>
+      <details><summary>Where do I get the starter sheet?</summary><div class="a">
+        <p>Use the link in your guide and click <b>Make a copy</b>. The copy is yours, in your own Google Drive. Here are the links:</p>
+        <p><a href="sheets/family/">Family Fun sheet</a> · <a href="sheets/friends/">Friend Group sheet</a> · <a href="sheets/mischief/">Mischief sheet</a></p>
+        <p>Daily Delight doesn't use a sheet. If the link won't open, the <code>.xlsx</code> in your box is the same sheet: upload it to Google Drive, open it with Google Sheets, then choose <span class="path">File › Save as Google Sheets</span>.</p>
+      </div></details>
+      <details><summary>I tested it, and it worked. Now what?</summary><div class="a">
+        <p>Switch it on so it runs by itself. In newer n8n versions that's the <b>Publish</b> button at the top of the workflow. In older ones it's the <b>Active</b> toggle. A workflow that isn't switched on only runs when you click <b>Execute workflow</b>.</p>
+      </div></details>
+    </div>
+  </section>
+
+  <section class="group" id="accounts" aria-labelledby="accounts-h">
+    <header><span class="caps" style="font-size:15px;color:#9E1B2F">No. 2</span><h2 id="accounts-h">Connecting accounts</h2></header>
+    <div class="qs">
+      <details open><summary>A step has a red warning triangle.</summary><div class="a">
+        <p>That step needs to know which account to use. Open it, click the <b>Credential</b> box, and choose <span class="path">Create new credential</span>. On n8n Cloud, click <b>Sign in with Google</b> and approve. After the first time, just pick that same credential from the list in every other Google step.</p>
+      </div></details>
+      <details><summary>It worked yesterday, and today it says my credentials failed.</summary><div class="a">
+        <p>Google sign-ins sometimes expire, or get cut off if you change your Google password. Open the credential (under <span class="path">Overview › Credentials</span>), click <b>Reconnect</b> or sign in again, and save.</p>
+      </div></details>
+      <details><summary>I run n8n myself, and there's no "Sign in with Google" button.</summary><div class="a">
+        <p>A self-hosted n8n needs its own Google sign-in setup: a one-time OAuth app in Google Cloud. Search for <b>"n8n Google OAuth2 credentials"</b> to find n8n's walkthrough. It takes about fifteen minutes. On n8n Cloud, you can skip this.</p>
+      </div></details>
+      <details><summary>Google says the app "hasn't been verified."</summary><div class="a">
+        <p>On a self-hosted n8n, that's your own OAuth app, so Google is warning you about yourself. Click <b>Advanced</b>, then continue. On n8n Cloud you shouldn't see this. If you do, close the window and try the sign-in again.</p>
+      </div></details>
+    </div>
+  </section>
+
+  <section class="group" id="sheets" aria-labelledby="sheets-h">
+    <header><span class="caps" style="font-size:15px;color:#9E1B2F">No. 3</span><h2 id="sheets-h">Sheets</h2></header>
+    <div class="qs">
+      <details open><summary>I pasted my sheet's link, and the Sheet box went back to "From list."</summary><div class="a">
+        <p>That's normal. n8n clears the tab whenever the document changes. Click the <b>Sheet</b> box and choose the tab that step's name points to (<b>Get Family</b> wants the <b>Family</b> tab). Or switch it to <span class="path">By Name</span> and type the tab name. Then click <b>Execute step</b> to check it reads your rows.</p>
+      </div></details>
+      <details><summary>Which link do I paste?</summary><div class="a">
+        <p>The one in your browser's address bar while your copy of the sheet is open. It starts with <code>https://docs.google.com/spreadsheets/d/</code>. Paste the same link into every Sheets step in that box.</p>
+      </div></details>
+      <details><summary>A Sheets step can't find a column, or the data comes out blank.</summary><div class="a">
+        <p>The workflows find columns by name, so row 1 of each tab has to match the starter sheet exactly, with the same spelling and capitals. Renamed a tab or a header? Change it back. Then open the step again so n8n reloads the columns.</p>
+      </div></details>
+      <details><summary>It's using my example rows.</summary><div class="a">
+        <p>Grey italic rows that start with <b>e.g.</b> are examples. Replace them with your own, or delete them.</p>
+      </div></details>
+    </div>
+  </section>
+
+  <section class="group" id="timing" aria-labelledby="timing-h">
+    <header><span class="caps" style="font-size:15px;color:#9E1B2F">No. 4</span><h2 id="timing-h">Timing</h2></header>
+    <div class="qs">
+      <details open><summary>It ran, but nothing was sent.</summary><div class="a">
+        <p>Several tricks stay quiet on purpose when there's nothing to say: no birthday coming up, no sky event tonight, a cloudy sunset. Open the <b>Executions</b> tab at the top of the workflow and click the latest run. If the step just before the send step shows no items, that's why.</p>
+      </div></details>
+      <details><summary>It sends at the wrong hour.</summary><div class="a">
+        <p>n8n is probably using a different time zone. Open the workflow's <span class="path">⋯ › Settings</span> and set <b>Timezone</b> to yours.</p>
+      </div></details>
+      <details><summary>The weather or sunset is for the wrong place.</summary><div class="a">
+        <p>Daily Delight uses the latitude and longitude in <b>Your Details</b>. In Google Maps, right-click your town and click the numbers at the top of the menu to copy them. The first number is latitude, the second is longitude.</p>
+      </div></details>
+      <details><summary>Sunset Alarm's test never finishes.</summary><div class="a">
+        <p>It's waiting for the alarm time on purpose: it sends twenty minutes before sunset. Test it in the afternoon, or switch it on and let tonight be the test.</p>
+      </div></details>
+      <details><summary>Secret Mission skipped the Friday reveal.</summary><div class="a">
+        <p>n8n only remembers the week's agent during real, scheduled runs, not manual tests. The first reveal comes the Friday after the first real Monday.</p>
+      </div></details>
+    </div>
+  </section>
+
+  <section class="group" id="chat" aria-labelledby="chat-h">
+    <header><span class="caps" style="font-size:15px;color:#9E1B2F">No. 5</span><h2 id="chat-h">Discord &amp; Slack</h2></header>
+    <div class="qs">
+      <details open><summary>Nothing shows up in the channel.</summary><div class="a">
+        <p>Check two things in <b>Your Details</b>. <b>chatWebhookUrl</b> must be the whole webhook link. <b>chatApp</b> must say <code>discord</code> or <code>slack</code>, matching where the link came from. If someone deleted the webhook, make a new one and paste that in.</p>
+      </div></details>
+      <details><summary>The message posts, but the bold text looks odd.</summary><div class="a">
+        <p><b>chatApp</b> is set to the other app. Discord and Slack format bold text differently, and the workflow switches formats based on that setting.</p>
+      </div></details>
+      <details><summary>Can it read our chat?</summary><div class="a">
+        <p>No. An incoming webhook can only post into one channel. Nothing in the Mischief box reads messages.</p>
+      </div></details>
+    </div>
+  </section>
+
+  <section class="group" id="order" aria-labelledby="order-h">
+    <header><span class="caps" style="font-size:15px;color:#9E1B2F">No. 6</span><h2 id="order-h">Your order</h2></header>
+    <div class="qs">
+      <details open><summary>I paid, but no email came.</summary><div class="a">
+        <p>Your box arrives within a few minutes, sent to the address you used at checkout. Check spam, promotions and updates. Still nothing after half an hour? Reply to your Stripe receipt and we'll send it by hand.</p>
+      </div></details>
+      <details><summary>The people on my list get my emails in spam.</summary><div class="a">
+        <p>These emails come from your own Gmail. Ask them to mark one as <b>Not spam</b>, or to add your address to their contacts. That usually fixes it for good.</p>
+      </div></details>
+      <details><summary>Something won't import or run as described.</summary><div class="a">
+        <p>Reply to your Stripe receipt. Say which box and which workflow, and what you see, and a screenshot helps a lot. We'll fix it or refund the box.</p>
+      </div></details>
+    </div>
+  </section>
+
+  <section class="contact" aria-labelledby="contact-h">
+    <div style="padding:clamp(28px,5vw,48px);display:flex;flex-wrap:wrap;gap:24px 48px;align-items:center;justify-content:space-between">
+      <div style="flex:1 1 300px">
+        <span class="caps" style="font-size:15px;color:#D6A23A">Still stuck?</span>
+        <h2 id="contact-h" style="margin-top:8px">A real person reads every reply.</h2>
+      </div>
+      <p style="margin:0;flex:1 1 320px">Reply to the email your box came in, or to your Stripe receipt. Tell us your box, your workflow and what you see. <a href="index.html#boxes">Back to the boxes</a></p>
+    </div>
+  </section>
+</main>
+</body>
+</html>
